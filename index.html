@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-wrapper">
+      <!-- Profile Card root container -->
+      <article
+        class="profile-card"
+        data-testid="test-profile-card"
+        aria-labelledby="user-name"
+      >
+        <header class="profile-header">
+          <!-- Avatar figure -->
+          <figure class="avatar-figure" aria-hidden="false">
+            <img
+              src="assets/default-avatar.svg"
+              alt="User avatar"
+              id="userAvatar"
+              data-testid="test-user-avatar"
+              width="160"
+              height="160"
+            />
+            <figcaption class="visually-hidden">User avatar</figcaption>
+          </figure>
+
+          <div class="avatar-controls">
+            <label class="btn" for="avatarFileInput">
+              Upload image
+              <input
+                id="avatarFileInput"
+                type="file"
+                accept="image/*"
+                aria-label="Upload avatar file"
+              />
+            </label>
+
+            <label class="url-input">
+              <span class="label-text">Image URL</span>
+              <input
+                id="avatarUrlInput"
+                type="url"
+                placeholder="https://example.com/photo.jpg"
+                aria-label="Avatar image URL"
+              />
+            </label>
+
+            <button id="avatarApplyUrl" class="btn" type="button">
+              Apply URL
+            </button>
+          </div>
+        </header>
+
+        <div class="profile-main">
+          <div class="profile-meta">
+            <h2 id="user-name" data-testid="test-user-name">
+              Agunwa Ogechukwu
+            </h2>
+            <p class="bio" data-testid="test-user-bio">
+              Frontend engineer who likes clean UI, usability, and building tiny
+              delightful experiences.
+            </p>
+
+            <p class="time" aria-live="polite">
+              Current time (ms):
+              <strong id="userTime" data-testid="test-user-time"></strong>
+            </p>
+
+            <!-- Social links nav -->
+            <nav aria-label="Social links">
+              <ul class="social-links" data-testid="test-user-social-links">
+                <li>
+                  <a
+                    href="https://twitter.com/example"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-twitter"
+                    >Twitter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/example"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-github"
+                    >GitHub</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/example"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-linkedin"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <aside class="profile-lists">
+            <section
+              aria-labelledby="hobbies-heading"
+              data-testid="test-user-hobbies"
+              class="list-section"
+            >
+              <h3 id="hobbies-heading">Hobbies</h3>
+              <ul>
+                <li>Coding</li>
+                <li>Road cycling</li>
+                <li>Reading articles</li>
+              </ul>
+            </section>
+
+            <section
+              aria-labelledby="dislikes-heading"
+              data-testid="test-user-dislikes"
+              class="list-section"
+            >
+              <h3 id="dislikes-heading">Dislikes</h3>
+              <ul>
+                <li>Loud or repetitive noises</li>
+                <li>Waiting in long lines</li>
+                <li>Being interrupted</li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
