@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header class="navbar" role="banner">
+      <h1 class="site-title">HNG</h1>
+      <nav aria-label="Main navigation">
+        <a href="index.html" class="active">Home </a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
     <main class="page-wrapper">
-      <!-- Profile Card root container -->
       <article
         class="profile-card"
         data-testid="test-profile-card"
@@ -75,6 +82,7 @@
               <ul class="social-links" data-testid="test-user-social-links">
                 <li>
                   <a
+                    class="social"
                     href="https://twitter.com/example"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -84,6 +92,7 @@
                 </li>
                 <li>
                   <a
+                    class="social"
                     href="https://github.com/example"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -93,6 +102,7 @@
                 </li>
                 <li>
                   <a
+                    class="social"
                     href="https://www.linkedin.com/in/example"
                     target="_blank"
                     rel="noopener noreferrer"

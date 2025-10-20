@@ -1,48 +1,76 @@
+## Profile Card Component & Stage 1 (Multi-Page Expansion)
 
+This project expands on the original Profile Card Component by introducing two new, fully functional pages an About Me page and a Contact Us page while maintaining the same focus on accessibility, responsiveness, and clean, semantic code.
+The project is built with semantic HTML, modern CSS, and vanilla JavaScript for lightweight, modular functionality.
 
-#  Profile Card Component
+## Live
 
-A small, accessible, and responsive Profile Card built with semantic HTML, modern CSS (Flexbox/Grid), and vanilla JavaScript.  
-The component displays a user’s name, bio, avatar, hobbies, dislikes, social links, and the current time in milliseconds — all following the exact `data-testid` attributes required for automated testing.
+ GitHub Repository: [https://github.com/Owens01/frontend-stage-1](https://github.com/Owens01/frontend-stage-1)
 
----
+## Project Overview
+Stage 0: Profile Card Component
 
-## Live 
+A single, responsive card displaying:
 
- GitHub Repository: [https://github.com/Owens01/profile-card-frontend](https://github.com/Owens01/profile-card-frontend)
+User name, bio, and avatar
 
----
+Hobbies, dislikes, and social links
 
-##  Features
+Real-time clock showing milliseconds
 
-✅ Fully responsive layout (mobile → desktop)  
-✅ Uses semantic HTML elements (`<article>`, `<figure>`, `<section>`, `<nav>`, etc.)  
-✅ Accessible keyboard navigation & focus styles  
-✅ Real-time display of current time (milliseconds)  
-✅ Avatar supports uploaded or external image URL  
-✅ Gradient background & smooth hover effects  
-✅ All elements include required `data-testid` attributes for automated tests
+All data tested using strict data-testid attributes
 
----
+Stage 1: Multi-Page Application
 
-##  Data-TestID Reference
+Built upon Stage 0, this stage adds:
 
-| Element | data-testid |
-|----------|--------------|
-| Profile Card | `test-profile-card` |
-| Name | `test-user-name` |
-| Biography | `test-user-bio` |
-| Time (milliseconds) | `test-user-time` |
-| Avatar Image | `test-user-avatar` |
-| Social Links Container | `test-user-social-links` |
-| Individual Social Link | `test-user-social-<network>` |
-| Hobbies List | `test-user-hobbies` |
-| Dislikes List | `test-user-dislikes` |
+About Me Page: A reflective page with detailed personal insights, goals, and thoughts.
 
----
+Contact Us Page: A functional contact form with real-time validation and accessible feedback.
 
-##  How to Run Locally
+Navigation: Simple, consistent links connecting all pages (Home, About, Contact).
 
-1. Clone this repository
-   ```bash
-   git clone https://github.com/your-username/profile-card.git
+## New Features (Stage 1)
+
+✅ Two new pages (about.html and contact.html)
+✅ Form validation using JavaScript
+✅ Dynamic success & error messages tied to inputs with aria-describedby
+✅ Accessible, keyboard-navigable interface
+✅ Semantic layout using <main>, <section>, <header>, <nav>, and <footer>
+✅ Fully responsive on mobile, tablet, and desktop
+✅ Reusable global stylesheet and script for consistency
+
+## Page Details
+ Home (Stage 0)
+Displays the user’s profile card from Stage 0 with all previously tested elements.
+
+About Me Page
+A semantic page wrapped in <main data-testid="test-about-page"> with five reflective sections:
+
+Section	data-testid
+Bio test-about-bio
+Goals in this program	test-about-goals
+Areas of low confidence	test-about-confidence
+Note to future self	test-about-future-note
+Extra thoughts	test-about-extra
+
+Each section uses proper headings and paragraphs for clarity and readability.
+
+## Contact Us Page
+
+A simple yet functional form with validation rules:
+
+Field	data-testid	Validation
+Full Name	test-contact-name	Required
+Email	test-contact-email	Required, must be a valid email (name@example.com)
+Subject	test-contact-subject	Required
+Message	test-contact-message	Required, minimum 10 characters
+
+Other required elements
+
+Submit Button → test-contact-submit
+
+Error Messages → test-contact-error-<field>
+
+Success Message → test-contact-success
+
