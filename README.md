@@ -5,7 +5,7 @@ The project is built with semantic HTML, modern CSS, and vanilla JavaScript for 
 
 ## Live
 
- GitHub Repository: [https://github.com/Owens01/frontend-stage-1](https://github.com/Owens01/frontend-stage-1)
+ GitHub Repository: [https://github.com/Owens01/profile-card-frontend](https://github.com/Owens01/profile-card-frontend)
 
 ## Project Overview
 Stage 0: Profile Card Component
